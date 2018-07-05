@@ -2,7 +2,6 @@ package _Root.patches.projects
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
 import jetbrains.buildServer.configs.kotlin.v2017_2.Project
-import jetbrains.buildServer.configs.kotlin.v2017_2.ProjectFeature
 import jetbrains.buildServer.configs.kotlin.v2017_2.ui.*
 
 /*
@@ -21,8 +20,5 @@ changeProject("8a76bacd-9ae0-48dc-a22f-83d448814b67") {
         add {
             param("env.sonar_pass", "test")
         }
-    }
-
-    features {
     }
 }
