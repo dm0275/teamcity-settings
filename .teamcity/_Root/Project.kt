@@ -19,6 +19,7 @@ object Project : Project({
         // Sonar Credentials
         param("env.SONAR_HOST_URL", "https://sonar01.com")
         password("env.SONAR_LOGIN", "12345678")
+        password("SONAR_LOGIN", "test")
     }
 
     features {
