@@ -23,6 +23,15 @@ object Project : Project({
             param("title", "Code Coverage")
             param("type", "BuildReportTab")
         }
+        versionedSettings {
+            id = "PROJECT_EXT_2"
+            mode = VersionedSettings.Mode.ENABLED
+            buildSettingsMode = VersionedSettings.BuildSettingsMode.PREFER_CURRENT_SETTINGS
+            rootExtId = eamcitySettings.id
+            showChanges = false
+            settingsFormat = VersionedSettings.Format.KOTLIN
+            storeSecureParamsOutsideOfVcs = true
+        }
         feature {
             id = "PROJECT_EXT_3"
             type = "sonar-qube"
@@ -30,15 +39,6 @@ object Project : Project({
             param("name", "Sonar")
             param("login", "test")
             param("url", "http://test.com")
-        }
-        versionedSettings {
-            id = "PROJECT_EXT_2"
-            mode = VersionedSettings.Mode.ENABLED
-            buildSettingsMode = VersionedSettings.BuildSettingsMode.PREFER_SETTINGS_FROM_VCS
-            rootExtId = eamcitySettings.id
-            showChanges = false
-            settingsFormat = VersionedSettings.Format.KOTLIN
-            storeSecureParamsOutsideOfVcs = true
         }
     }
 
