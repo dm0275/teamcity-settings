@@ -24,18 +24,5 @@ changeProject("8a76bacd-9ae0-48dc-a22f-83d448814b67") {
     }
 
     features {
-        val feature1 = find<ProjectFeature> {
-            feature {
-                type = "sonar-qube"
-                id = "PROJECT_EXT_5"
-                param("id", "1")
-                param("login", "sonar")
-                param("name", "Sonar")
-                param("url", "https://sonarcloud.io")
-            }
-        }
-        feature1.apply {
-            param("password", "zxx7ac2d3c3cdf0384d")
-        }
     }
 }
