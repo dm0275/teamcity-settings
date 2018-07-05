@@ -36,6 +36,7 @@ object Project : Project({
             param("name", "Sonar")
             param("id", "fddae5dd-f8b2-48ee-aca5-c0e794f6b64d")
             param("login", "sonar")
+            param("password", "%sonarPassword%")
             param("url", "https://sonar01.com")
         }
         versionedSettings {
