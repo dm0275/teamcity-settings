@@ -18,6 +18,7 @@ object Project : Project({
     params {
         // Sonar Credentials
         param("env.SONAR_HOST_URL", "https://sonar01.com")
+        param("sonarLogin", "sonar")
         password("env.SONAR_LOGIN", "test")
         password("sonarPassword", "test")
         password("env.sonarPassword", "test")
@@ -36,7 +37,7 @@ object Project : Project({
             id = "PROJECT_EXT_3"
             param("name", "Sonar")
             param("id", "fddae5dd-f8b2-48ee-aca5-c0e794f6b64d")
-            param("login", "sonar")
+            //param("login", "sonar")
             param("url", "https://sonar01.com")
         }
         versionedSettings {
