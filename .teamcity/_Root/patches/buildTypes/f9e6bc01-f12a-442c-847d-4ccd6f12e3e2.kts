@@ -19,6 +19,7 @@ create("4300ba30-27e0-40c8-a606-b6e42fe3846b", BuildType({
     vcs {
         root("TestPipeline_HttpsGithubComDm0275testPipelineGitRefsHeadsMaster")
 
+        checkoutMode = CheckoutMode.ON_SERVER
     }
 
     steps {
