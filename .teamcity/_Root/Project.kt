@@ -37,7 +37,7 @@ object Project : Project({
             id = "PROJECT_EXT_3"
             param("name", "Sonar")
             param("id", "fddae5dd-f8b2-48ee-aca5-c0e794f6b64d")
-            param("login", "$sonarLogin")
+            param("login", "%sonarLogin%")
             param("url", "https://sonar01.com")
         }
         versionedSettings {
