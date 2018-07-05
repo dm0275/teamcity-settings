@@ -42,7 +42,8 @@ object Project : Project({
             //param("password", "%SONAR_LOGIN%" )
             //param("url", "https://sonarcloud.io")
             param("url", "%SONAR_HOST_URL%")
-            password("password", "test")
+            param("password", "")
+            //password("password", "test")
         }
         versionedSettings {
             id = "PROJECT_EXT_2"
