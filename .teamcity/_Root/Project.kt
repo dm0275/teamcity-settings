@@ -24,7 +24,7 @@ object Project : Project({
             param("type", "BuildReportTab")
         }
         feature {
-            id = "PROJECT_EXT_2"
+            id = "PROJECT_EXT_3"
             type = "sonar-qube"
             param("password", "test")
             param("name", "Sonar")
