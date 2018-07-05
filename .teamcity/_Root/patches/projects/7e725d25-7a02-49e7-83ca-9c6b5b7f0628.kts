@@ -17,8 +17,32 @@ changeProject("7e725d25-7a02-49e7-83ca-9c6b5b7f0628") {
         update {
             password("env.SONAR_LOGIN", "credentialsJSON:0e47334b-423d-47e9-baa8-6ee612ada4d9")
         }
+        expect {
+            password("env.sonarPassword", "test")
+        }
+        update {
+            password("env.sonarPassword", "credentialsJSON:0e47334b-423d-47e9-baa8-6ee612ada4d9")
+        }
+        expect {
+            password("sonarPassword", "test")
+        }
+        update {
+            password("sonarPassword", "credentialsJSON:0e47334b-423d-47e9-baa8-6ee612ada4d9")
+        }
     }
 
     features {
+        add {
+            feature {
+                type = "OAuthProvider"
+                id = "PROJECT_EXT_5"
+                param("clientId", "dm0275")
+                param("defaultTokenScope", "public_repo,repo,repo:status,write:repo_hook")
+                param("secure:clientSecret", "credentialsJSON:ec3588b9-c678-4667-9dc1-19a3c3ae09f1")
+                param("displayName", "GitHub.com")
+                param("gitHubUrl", "https://github.com/")
+                param("providerType", "GitHub")
+            }
+        }
     }
 }
