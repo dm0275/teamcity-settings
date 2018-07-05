@@ -2,6 +2,7 @@ package _Root.patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
 import jetbrains.buildServer.configs.kotlin.v2017_2.BuildType
+import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2017_2.ui.*
 
@@ -18,6 +19,13 @@ create("4300ba30-27e0-40c8-a606-b6e42fe3846b", BuildType({
     vcs {
         root("TestPipeline_HttpsGithubComDm0275testPipelineGitRefsHeadsMaster")
 
+    }
+
+    steps {
+        script {
+            name = "test"
+            scriptContent = "echo %sonarLogin%"
+        }
     }
 
     triggers {
