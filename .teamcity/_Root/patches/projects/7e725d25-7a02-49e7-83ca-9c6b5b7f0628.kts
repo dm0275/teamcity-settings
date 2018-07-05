@@ -30,5 +30,16 @@ changeProject("7e725d25-7a02-49e7-83ca-9c6b5b7f0628") {
                 param("url", "https://sonarcloud.io")
             }
         }
+        add {
+            feature {
+                type = "sonar-qube"
+                id = "PROJECT_EXT_4"
+                param("password", "zxx7ac2d3c3cdf0384d")
+                param("name", "Sonar")
+                param("id", "fddae5dd-f8b2-48ee-aca5-c0e794f6b64d")
+                param("login", "soanr")
+                param("url", "https://sonar01.com")
+            }
+        }
     }
 }
