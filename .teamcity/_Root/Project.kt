@@ -34,7 +34,7 @@ object Project : Project({
             id = "PROJECT_EXT_5"
             //password("password", "%SONAR_LOGIN%" )
             param("name", "Sonar")
-            //param("id", "8b543757-42d1-4479-9120-a191d80f96ed")
+            param("id", "8b543757-42d1-4479-9120-a191d80f96ed")
             //param("login", "sonar")
             param("url", "https://sonarcloud.io")
         }
