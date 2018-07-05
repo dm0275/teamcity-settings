@@ -20,5 +20,8 @@ changeProject("8a76bacd-9ae0-48dc-a22f-83d448814b67") {
         add {
             param("env.sonar_pass", "test")
         }
+        add {
+            password("SONAR_LOGIN", "credentialsJSON:e742061f-f1ff-40a7-9078-8441791a0e96")
+        }
     }
 }
