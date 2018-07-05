@@ -23,15 +23,15 @@ object Project : Project({
             param("title", "Code Coverage")
             param("type", "BuildReportTab")
         }
-        feature {
-            id = "PROJECT_EXT_4"
-            type = "sonar-qube"
-            param("password", "sonar_pass")
-            param("name", "Sonar")
-            param("id", "762649dc-00b0-44bc-9419-9c417a050185")
-            param("login", "tester")
-            param("url", "https://sonarcloud.io")
-        }
+        // feature {
+        //     id = "PROJECT_EXT_4"
+        //     type = "sonar-qube"
+        //     param("password", "sonar_pass")
+        //     param("name", "Sonar")
+        //     param("id", "762649dc-00b0-44bc-9419-9c417a050185")
+        //     param("login", "tester")
+        //     param("url", "https://sonarcloud.io")
+        // }
         versionedSettings {
             id = "PROJECT_EXT_2"
             mode = VersionedSettings.Mode.ENABLED
