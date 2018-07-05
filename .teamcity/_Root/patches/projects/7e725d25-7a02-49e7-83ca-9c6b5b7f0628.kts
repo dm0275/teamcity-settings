@@ -2,7 +2,6 @@ package _Root.patches.projects
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
 import jetbrains.buildServer.configs.kotlin.v2017_2.Project
-import jetbrains.buildServer.configs.kotlin.v2017_2.ProjectFeature
 import jetbrains.buildServer.configs.kotlin.v2017_2.ui.*
 
 /*
@@ -21,7 +20,7 @@ changeProject("7e725d25-7a02-49e7-83ca-9c6b5b7f0628") {
     }
 
     features {
-        val feature1 = find<ProjectFeature> {
+        remove {
             feature {
                 type = "sonar-qube"
                 id = "PROJECT_EXT_3"
@@ -30,9 +29,6 @@ changeProject("7e725d25-7a02-49e7-83ca-9c6b5b7f0628") {
                 param("name", "Sonar")
                 param("url", "https://sonarcloud.io")
             }
-        }
-        feature1.apply {
-            param("password", "zxx7ac2d3c3cdf0384d")
         }
     }
 }
