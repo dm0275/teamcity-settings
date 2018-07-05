@@ -23,6 +23,14 @@ object Project : Project({
             param("title", "Code Coverage")
             param("type", "BuildReportTab")
         }
+        feature {
+            id = "PROJECT_EXT_2"
+            type = "sonar-qube"
+            param("password", "test")
+            param("name", "Sonar")
+            param("login", "test")
+            param("url", "http://test.com")
+        }
         versionedSettings {
             id = "PROJECT_EXT_2"
             mode = VersionedSettings.Mode.ENABLED
