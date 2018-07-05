@@ -26,7 +26,7 @@ object Project : Project({
         feature {
             id = "PROJECT_EXT_4"
             type = "sonar-qube"
-            param("password", "zxxbf9865189cbb487a")
+            param("password", "%sonar_pass%")
             param("name", "Sonar")
             param("id", "1")
             param("login", "tester")
