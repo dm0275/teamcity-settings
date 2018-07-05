@@ -28,7 +28,7 @@ object Project : Project({
             type = "sonar-qube"
             param("password", "sonar_pass")
             param("name", "Sonar")
-            param("id", "123456")
+            param("id", "762649dc-00b0-44bc-9419-9c417a050185")
             param("login", "tester")
             param("url", "https://sonarcloud.io")
         }
