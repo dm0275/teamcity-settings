@@ -1,26 +1,19 @@
 package _Root
 
 import _Root.vcsRoots.*
-import _Root.vcsRoots.eamcitySettings
+import _Root.vcsRoots.teamcitySettingsGit
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
 import jetbrains.buildServer.configs.kotlin.v2017_2.Project
 import jetbrains.buildServer.configs.kotlin.v2017_2.projectFeatures.VersionedSettings
 import jetbrains.buildServer.configs.kotlin.v2017_2.projectFeatures.versionedSettings
 
 object Project : Project({
-    uuid = "8a76bacd-9ae0-48dc-a22f-83d448814b67"
+    uuid = "7e725d25-7a02-49e7-83ca-9c6b5b7f0628"
     id = "_Root"
     name = "<Root project>"
     description = "Contains all other projects"
 
-    vcsRoot(eamcitySettings)
-
-    params {
-        // Sonar Credentials
-        param("env.SONAR_HOST_URL", "https://sonar01.com")
-        password("env.SONAR_LOGIN", "12345678")
-        password("SONAR_LOGIN", "test")
-    }
+    vcsRoot(teamcitySettingsGit)
 
     features {
         feature {
@@ -30,26 +23,11 @@ object Project : Project({
             param("title", "Code Coverage")
             param("type", "BuildReportTab")
         }
-        feature {
-            type = "sonar-qube"
-            id = "PROJECT_EXT_5"
-            //password("password", "%SONAR_LOGIN%" )
-            param("name", "Sonar")
-            param("id", "1")
-            //param("id", "8b543757-42d1-4479-9120-a191d80f96ed")
-            param("login", "sonar")
-            //param("password", "credentialsJSON:e742061f-f1ff-40a7-9078-8441791a0e96")
-            param("password", "%SONAR_LOGIN%" )
-            //param("url", "https://sonarcloud.io")
-            param("url", "%SONAR_HOST_URL%")
-            //param("password", "")
-            //password("password", "test")
-        }
         versionedSettings {
             id = "PROJECT_EXT_2"
             mode = VersionedSettings.Mode.ENABLED
             buildSettingsMode = VersionedSettings.BuildSettingsMode.PREFER_CURRENT_SETTINGS
-            rootExtId = eamcitySettings.id
+            rootExtId = teamcitySettingsGit.id
             showChanges = false
             settingsFormat = VersionedSettings.Format.KOTLIN
             storeSecureParamsOutsideOfVcs = true
