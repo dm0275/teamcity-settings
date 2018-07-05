@@ -15,6 +15,12 @@ object Project : Project({
 
     vcsRoot(teamcitySettingsGit)
 
+    params {
+        // Sonar Credentials
+        param("env.SONAR_HOST_URL", "https://sonar01.com")
+        password("env.SONAR_LOGIN", "test")
+    }
+
     features {
         feature {
             id = "PROJECT_EXT_1"
