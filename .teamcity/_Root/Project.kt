@@ -32,14 +32,14 @@ object Project : Project({
             settingsFormat = VersionedSettings.Format.KOTLIN
             storeSecureParamsOutsideOfVcs = true
         }
-        feature {
-            id = "PROJECT_EXT_3"
-            type = "sonar-qube"
-            param("password", "test")
-            param("name", "Sonar")
-            param("login", "test")
-            param("url", "http://test.com")
-        }
+        // feature {
+        //     id = "PROJECT_EXT_3"
+        //     type = "sonar-qube"
+        //     param("password", "test")
+        //     param("name", "Sonar")
+        //     param("login", "test")
+        //     param("url", "http://test.com")
+        // }
     }
 
     cleanup {
