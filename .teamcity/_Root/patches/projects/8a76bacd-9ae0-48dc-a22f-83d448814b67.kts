@@ -15,8 +15,10 @@ changeProject("8a76bacd-9ae0-48dc-a22f-83d448814b67") {
             feature {
                 type = "sonar-qube"
                 id = "PROJECT_EXT_4"
+                param("password", "zxxbf9865189cbb487a")
                 param("name", "Sonar")
                 param("id", "762649dc-00b0-44bc-9419-9c417a050185")
+                param("login", "tester")
                 param("url", "https://sonarcloud.io")
             }
         }
